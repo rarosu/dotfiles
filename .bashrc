@@ -17,11 +17,13 @@ else
   SYMBOL='$'
 fi
 
-PS1="$DIR_COLOR[\w]$RESET_COLOR $SYMBOL "
+PS1="$USER_COLOR\u@\h $DIR_COLOR\w$RESET_COLOR $SYMBOL "
 
-eval $(dircolors -b ~/.dircolors)
-export GREP_COLOR="1;31"
+eval "`dircolors -b ~/.dircolors`"
 
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -la'
+#export GREP_COLOR="1;31"
+
+alias ls='ls --color=yes'
+alias la='ls -a --color=yes'
+alias ll='ls -l --color=yes'
+alias lla='ls -la --color=yes'

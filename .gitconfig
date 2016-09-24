@@ -3,3 +3,4 @@
 	name = Lars Woxberg | Rarosu
 [core]
 	editor = vim
+	autocrlf = input
